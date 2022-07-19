@@ -30,7 +30,11 @@
                         <td>
                             <button><a href="{{ route('comics.show', ['comic' => $comic]) }}">View</a></button>
                             <button><a href="{{ route('comics.edit', ['comic' => $comic]) }}">Edit</a></button>
-                            <button><a href="#">Delete</a></button>
+                            <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button>Delete</button>
+                            </form>  
                         </td>
                     </tr>
                 @endforeach
