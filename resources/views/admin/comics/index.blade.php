@@ -13,6 +13,7 @@
                     <th>SERIES</th>
                     <th>SALE DATE</th>
                     <th>TYPE</th>
+                    <th>ACTIONS</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +26,12 @@
                         <td>{{$comic->price}}</td>
                         <td>{{$comic->series}}</td>
                         <td>{{$comic->sale_date}}</td>
-                        <td>{{$comic->type}}/td> 
+                        <td>{{$comic->type}}</td> 
+                        <td>
+                            <button><a href="#">View</a></button>
+                            <button><a href="#">Edit</a></button>
+                            <button><a href="#">Delete</a></button>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
