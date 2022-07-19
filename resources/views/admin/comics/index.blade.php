@@ -28,8 +28,8 @@
                         <td>{{$comic->sale_date}}</td>
                         <td>{{$comic->type}}</td> 
                         <td>
-                            <button><a href="#">View</a></button>
-                            <button><a href="#">Edit</a></button>
+                            <button><a href="{{ route('comics.show', ['comic' => $comic]) }}">View</a></button>
+                            <button><a href="{{ route('comics.edit', ['comic' => $comic]) }}">Edit</a></button>
                             <button><a href="#">Delete</a></button>
                         </td>
                     </tr>

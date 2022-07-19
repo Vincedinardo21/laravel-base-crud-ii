@@ -3,7 +3,8 @@
 @section('MainContent')
     <h1>Insert new comic</h1>
 
-    <form action="{{route('comics.store')}}" method="post">
+    <form action="{{route('comics.update', ['comic' => $comic])}}" method="post">
+        @method('put')
         @csrf
         <div><input type="text" name="title" placeholder="Inserisci titolo"></div>
         <div><input type="text" name="description" placeholder="Inserisci descrizione"></div>
